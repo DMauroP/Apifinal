@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 
 // mongodb connection
 mongoose.connect(
-  "mongodb+srv://mauricio:asdf1234@cluster0.d57qytk.mongodb.net/dbmensajeria?retryWrites=true&w=majority"
+  "mongodb+srv://mauricio:asdf1234@cluster0.d57qytk.mongodb.net/dblatata?retryWrites=true&w=majority"
 );
 
 // server listening
