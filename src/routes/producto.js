@@ -3,7 +3,7 @@ const productoSchema = require("../models/productos");
 
 const router = express.Router();
 
-// create producto
+// crear producto
 router.post("/productos", (req, res) => {
   const producto = productoSchema(req.body);
   producto
@@ -12,7 +12,7 @@ router.post("/productos", (req, res) => {
     .catch((error) => res.json({ message: error }));
 });
 
-// get all productos
+// obtener todos los productos
 router.get("/productos", (req, res) => {
   productoSchema
     .find()
@@ -20,7 +20,7 @@ router.get("/productos", (req, res) => {
     .catch((error) => res.json({ message: error }));
 });
 
-// get a producto
+//obtener un producto
 router.get("/productos/:id", (req, res) => {
   const { id } = req.params;
   productoSchema
@@ -29,7 +29,7 @@ router.get("/productos/:id", (req, res) => {
     .catch((error) => res.json({ message: error }));
 });
 
-// delete a producto
+// eliminar un producto
 router.delete("/productos/:id", (req, res) => {
   const { id } = req.params;
   productoSchema
@@ -38,7 +38,7 @@ router.delete("/productos/:id", (req, res) => {
     .catch((error) => res.json({ message: error }));
 });
 
-// update a producto
+// actualizar un producto
 router.put("/productos/:id", (req, res) => {
   const { id } = req.params;
   const { nombre_producto, precio_unitario, cantidad_producto, descripcion, id_categoria_producto, foto } = req.body;

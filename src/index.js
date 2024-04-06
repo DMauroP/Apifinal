@@ -21,5 +21,5 @@ mongoose.connect(
   "mongodb+srv://mauricio:asdf1234@cluster0.d57qytk.mongodb.net/dblatata?retryWrites=true&w=majority"
 );
 
-// server listening
-app.listen(port, () => console.log("Server listening to", port));
+// Servidor
+app.listen(port, () => console.log("Escuchando en el puerto: ", port));
